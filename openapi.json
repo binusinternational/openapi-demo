@@ -8,5 +8,27 @@
       "name": "Someone's name",
       "email": "someone@binus.ac.id"
     }
-  }
+  },
+  "servers": [
+    {
+      "url": "https://{subdomain}.yourawsdomain.yourtld/api/v1",
+      "description": "AWS",
+      "variables": {
+        "subdomain":{
+          "enum": ["dev","prod"],
+          "default": "dev"
+        }
+      }
+    },
+    {
+      "url": "https://{subdomain}.yourgcpdomain.anothertld/api/v1",
+      "description": "GCP",
+      "variables": {
+        "subdomain":{
+          "enum": ["dev","prod"],
+          "default": "dev"
+        }
+      }
+    }
+  ]
 }
