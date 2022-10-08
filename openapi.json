@@ -30,5 +30,36 @@
         }
       }
     }
-  ]
+  ],
+  "tags": [
+    {"name": "Query","description": "All endpoints related to query projects"},
+    {"name": "Create","description": "All endpoints related to creating projects"}
+  ],
+  "paths": {
+    "/projects":{
+      "get":{
+        "tags": ["Query"],
+        "summary": "Get all projects",
+        "responses": {
+          "200":{
+            "description": "Projects to be returned",
+            "content": {
+              "application/json":{
+                "example": [
+                  {
+                    "project-id":"530fea",
+                    "title": "title one"
+                  },
+                  {
+                    "project-id":"4427b0",
+                    "title": "title two"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
