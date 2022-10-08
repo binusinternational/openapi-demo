@@ -70,21 +70,7 @@
           "content": {
             "application/json":{
               "schema":{
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "project-id": {
-                      "type":"string",
-                      "required": true
-                    },
-                    "title": {
-                      "type":"string",
-                      "required": true,
-                      "minLength": 1
-                    }
-                  }
-                }
+                "$ref": "#/components/schemas/Project"
               },
               "examples": {
                 "single":{
@@ -120,6 +106,27 @@
                   "message": "All projects are successfully created."
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Project":{
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "project-id": {
+              "type":"string",
+              "required": true
+            },
+            "title": {
+              "type":"string",
+              "required": true,
+              "minLength": 1
             }
           }
         }
