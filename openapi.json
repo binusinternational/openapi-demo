@@ -2,6 +2,11 @@
   "openapi":"3.0.3",
   "info": {
     "title":"Project Service",
-    "version":"1.0"
+    "version":"1.0.0",
+    "description": "This spec lists all available endpoints related to the project service.",
+    "contact": {
+      "name": "Someone's name",
+      "email": "someone@binus.ac.id"
+    }
   }
 }
