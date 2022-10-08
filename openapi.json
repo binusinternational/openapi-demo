@@ -38,6 +38,11 @@
   "paths": {
     "/projects":{
       "get":{
+        "security": [
+          {
+            "Authorization": []
+          }
+        ],
         "tags": ["Query"],
         "summary": "Get all projects",
         "responses": {
@@ -61,6 +66,11 @@
         }
       },
       "post":{
+        "security": [
+          {
+            "Authorization": []
+          }
+        ],
         "tags": ["Create"],
         "summary": "Post new projects",
         "description": "Multiple projects can be submitted at once.",
@@ -113,6 +123,14 @@
     }
   },
   "components": {
+    "securitySchemes": {
+      "Authorization": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Please enter the access token."
+      }
+    },
     "schemas": {
       "Project":{
         "type": "array",
